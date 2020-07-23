@@ -12,8 +12,8 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
-app.get('/succes', function (req, res) {
-    res.render('succes', req.query);
+app.get('/success', function (req, res) {
+    res.render('success', req.query);
 });
 
 app.get('/pending', function (req, res) {
@@ -76,7 +76,7 @@ app.post('/checkout', async function (req,res)  {
             },
 
             back_urls: {
-                success: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/succes?collection_id=[PAYMENT_ID]&collection_status=approved&external_reference=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id=[PREFERENCE_ID]&site_id=[SITE_ID]&processing_mode=aggregator&merchant_account_id=null",
+                success: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/success?collection_id=[PAYMENT_ID]&collection_status=approved&external_reference=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id=[PREFERENCE_ID]&site_id=[SITE_ID]&processing_mode=aggregator&merchant_account_id=null",
                 pending: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/pending",
                 failure: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/failure"
             },
