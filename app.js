@@ -30,7 +30,7 @@ app.get('/detail', function (req, res) {
 
 app.post('/webhooks', function(req, res) {
     console.log(req.body);
-    res.status(200)
+    res.status(200).send("excelemte")
 })
 
 app.post('/checkout', async function (req,res)  {
