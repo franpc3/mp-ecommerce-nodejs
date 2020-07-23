@@ -28,6 +28,10 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.post('/webhooks', function(req, res) {
+    console.log(req.body);
+})
+
 app.post('/checkout', async function (req,res)  {
 
     console.log(req.query);
