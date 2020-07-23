@@ -28,9 +28,11 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.use(express.json());
+
 app.post('/webhooks', function(req, res) {
-    console.log(req );
-    res.status(200).send("excelemte")
+    res.send({ success: true, data: req.body });
+    console.log("Request body:", req.body);
 })
 
 app.post('/checkout', async function (req,res)  {
