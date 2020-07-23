@@ -29,7 +29,8 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/webhooks', function(req, res) {
-    console.log(req.query);
+    console.log(req.body);
+    res.send("exc")
 })
 
 app.post('/checkout', async function (req,res)  {
