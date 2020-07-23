@@ -76,7 +76,7 @@ app.post('/checkout', async function (req,res)  {
             },
 
             back_urls: {
-                success: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/success?collection_id=[PAYMENT_ID]&collection_status=approved&external_reference=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id=[PREFERENCE_ID]&site_id=[SITE_ID]&processing_mode=aggregator&merchant_account_id=null",
+                success: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/success",
                 pending: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/pending",
                 failure: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/failure"
             },
@@ -87,7 +87,7 @@ app.post('/checkout', async function (req,res)  {
         mercadopago.preferences.create(preference)
             .then(function (response) {
                 // Este valor reemplazará el string "$$init_point$$" en tu HTML
-                res.redirect(response.body.sandbox_init_point);
+                res.redirect(response.body.init_point);
             }).catch(function (err) {
                console.log(err);
             });
