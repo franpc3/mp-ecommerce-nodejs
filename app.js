@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/succes', function (req, res) {
-    res.render('succes');
+    res.render('succes', req.query);
 });
 
 app.get('/pending', function (req, res) {
@@ -40,12 +40,13 @@ app.post('/checkout', async function (req,res)  {
                     unit_price: parseInt(req.query.unit_price),
                     quantity: 1,
                     picture_url: "https://samsungar.vtexassets.com/arquivos/ids/162059-800-auto?width=800&height=auto&aspect=true",
-                    external_reference: "franciscopc3@gmail.com"
+                    
 
 
                     
                 }
             ],
+            external_reference: "franciscopc3@gmail.com",
             payer: {
                 name: 'Lalo',
                 surname: 'Landa',
