@@ -29,7 +29,7 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/webhooks', function(req, res) {
-    console.log(req.body);
+    console.log(JSON.parse(req.Body) );
     res.status(200).send("excelemte")
 })
 
