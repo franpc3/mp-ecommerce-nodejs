@@ -29,7 +29,7 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/webhooks', function(req, res) {
-    console.log(req.body);
+    console.log(req.data);
     res.send("exc")
 })
 
@@ -86,7 +86,7 @@ app.post('/checkout', async function (req,res)  {
                 failure: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/failure"
             },
             auto_return: "approved",
-            notification_url: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/webhooks?source_news=webhooks"
+            notification_url: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/webhooks"
            
         };
     
