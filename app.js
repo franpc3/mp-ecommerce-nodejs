@@ -86,7 +86,7 @@ app.post('/checkout', async function (req,res)  {
                 failure: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/failure"
             },
             auto_return: "approved",
-            notification_url: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/webhooks"
+            notification_url: "https://franpc3-mp-ecommerce-nodejs.herokuapp.com/webhooks?source_news=webhooks"
            
         };
     
