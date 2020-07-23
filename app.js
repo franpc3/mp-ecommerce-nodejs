@@ -102,6 +102,7 @@ app.use('/assets', express.static(__dirname + '/assets'));
 app.listen(process.env.PORT || 3000);
 
 mercadopago.configure({
-    access_token: process.env.MP_TOKEN
+    access_token: process.env.MP_TOKEN,
+    integrator_id: process.env.INTEGRATOR_ID
   });
   
