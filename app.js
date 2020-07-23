@@ -86,7 +86,7 @@ app.post('/checkout', async function (req,res)  {
         mercadopago.preferences.create(preference)
             .then(function (response) {
                 // Este valor reemplazará el string "$$init_point$$" en tu HTML
-                res.json({ response});
+                res.redirect( response.body.sandbox_init_point);
             }).catch(function (err) {
                console.log(err);
             });
