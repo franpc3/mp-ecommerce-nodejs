@@ -37,20 +37,14 @@ app.post('/webhooks', function(req, res) {
 
 app.post('/checkout', async function (req,res)  {
 
-    console.log(req.query);
-    
         let preference = {
             items: [
                 {   id: 1234,
                     title: req.query.titulo,
-                    description: "Esta es una descripcion",
+                    description: "Dispositivo móvil de Tienda e-commerce",
                     unit_price: parseInt(req.query.unit_price),
                     quantity: 1,
-                    picture_url: "https://samsungar.vtexassets.com/arquivos/ids/162059-800-auto?width=800&height=auto&aspect=true",
-                    
-
-
-                    
+                    picture_url: "https://samsungar.vtexassets.com/arquivos/ids/162059-800-auto?width=800&height=auto&aspect=true"   
                 }
             ],
             external_reference: "franciscopc3@gmail.com",
